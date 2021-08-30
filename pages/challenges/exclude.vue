@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="10" justify="center" align="center">
+    <v-col cols="10" md="6" justify="center" align="center">
       <div v-if="matrix.length" class="matrix-grid">
         <div
           class="matrix-row"
@@ -19,11 +19,9 @@
         </div>
       </div>
       <div>
-        <v-btn large class="run-btn" @click="reFillRandom()">Random</v-btn>
-        <v-btn large class="run-btn" @click="excludeTouching()">Run</v-btn>
-        <v-btn large class="run-btn" @click="randomAndRun()"
-          >Random & Run</v-btn
-        >
+        <v-btn class="run-btn" @click="reFillRandom()">Random</v-btn>
+        <v-btn class="run-btn" @click="excludeTouching()">Run</v-btn>
+        <v-btn class="run-btn" @click="randomAndRun()">Random & Run</v-btn>
       </div>
     </v-col>
   </v-row>
@@ -42,7 +40,7 @@ export default {
     };
   },
   mounted() {
-    this.setMatrixSize(15, 25);
+    this.setMatrixSize(25, 25);
     this.fillRandom();
   },
   methods: {
